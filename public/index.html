@@ -349,7 +349,55 @@
                 type: jsPsychSurveyHtmlForm,
                 preamble: '<h1>DEMOGRAPHIC INFORMATION</h1>',
                 html: `
-                        <form class="container">
+
+                    <style>
+                          .container {
+                            display: flex;
+                            justify-content: center;
+                            flex-wrap: wrap;
+                            margin-top: 24px;
+                            gap: 48px 0;
+                            width:1100px;
+                            height:50vh;
+                            padding-bottom: 24px;
+                          }
+                          .column {
+                            width: 45%;
+                          }
+                          .column input[type="text"], .column input[type="radio"], .column input[type="checkbox"] {
+                            margin-top: 5px;
+                            margin-bottom: 15px;
+                          }
+
+                          .container section{
+                          width:50%;
+                          text-align: left;
+                          }
+
+                          .demo-input{
+                            padding: 18px 24px;
+                            margin-left: 12px;
+                            margin-top: 12px;
+                            border: none;
+                            outline:none;
+                            background: #f1f1f1;
+                            min-width: 200px;
+                            width: 100%;
+                            border-radius: 5px ;
+                          }
+
+                          .jspsych-content{
+                                text-align: left;
+                                margin: auto;
+                                height: 100vh;
+                                display: grid;
+                                place-content: center;
+                                place-items: start;
+                                width: 80%;
+                            }
+
+                        </style>
+                        <div class="container">
                             <section>
                                 <label for="age" style="font-weight: bold">Age:</label><br>
                                 <input class="demo-input" placeholder="Enter your Age" type="text" id="age" name="age" required><br><br>
@@ -381,10 +429,10 @@
 
                             <section>
                                 <label style="font-weight: bold">Gender:</label><br>
-                                <input type="radio" id="man" name="gender" value="Man" required>
-                                <label for="man">Man</label><br>
-                                <input type="radio" id="woman" name="gender" value="Woman" required>
-                                <label for="woman">Woman</label><br>
+                                <input type="radio" id="male" name="gender" value="Male" required>
+                                <label for="male">Male</label><br>
+                                <input type="radio" id="female" name="gender" value="Female" required>
+                                <label for="female">Female</label><br>
                                 <input type="radio" id="third" name="gender" value="Third gender" required>
                                 <label for="third">Non-binary/third gender</label><br>
                                 <input type="radio" id="other" name="gender" value="Prefer not to say" required>
@@ -393,7 +441,7 @@
 
 
 
-                        </form>
+                        </div>
                       `,
                 button_label: 'Continue'
             }
@@ -404,7 +452,55 @@
                 type: jsPsychSurveyHtmlForm,
                 preamble: '<h1>DEMOGRAPHIC INFORMATION</h1>',
                 html: `
-                        <form class="container">
+                        <style>
+                          .container {
+                            display: flex;
+                            justify-content: start;
+                            flex-wrap: wrap;
+                            margin-top: 24px;
+                            gap: 48px 0;
+                            width:1100px;
+                            height:50vh;
+                            padding-bottom: 24px;
+                          }
+                          .column {
+                            width: 45%;
+                          }
+                          .column input[type="text"], .column input[type="radio"], .column input[type="checkbox"] {
+                            margin-top: 5px;
+                            margin-bottom: 15px;
+                          }
+
+                          .container section{
+                          width:50%;
+                          text-align: left;
+                          }
+
+                          .demo-input{
+                            padding: 18px 24px;
+                            margin-left: 12px;
+                            margin-top: 12px;
+                            border: none;
+                            outline:none;
+                            background: #f1f1f1;
+                            min-width: 200px;
+                            width: 100%;
+                            border-radius: 5px ;
+                          }
+
+                          .jspsych-content{
+                            text-align: left;
+                            margin: auto;
+                            height: 100vh;
+                            display: grid;
+                            place-content: center;
+                            place-items: start;
+                            width: 80%;
+                        }
+
+                          </style>
+
+                        <div class="container">
 
                             <section>
                                 <label style="font-weight: bold">Level of Education:</label><br>
@@ -434,7 +530,7 @@
                                 <input class="demo-input" placeholder="Enter Languages" type="text" id="comfortable_language" name="comfortable_language" required><br><br>
                             </section>
 
-                        </form>
+                        </div>
                       `,
                 button_label: 'Continue'
             }
@@ -443,7 +539,7 @@
 
             const demographics_three = {
                 type: jsPsychSurveyMultiSelect,
-                preamble: "<strong>Please indicate if you did NOT understand the meaning of some of the words in Categories 1 and 2. Select any that you did not understand:</strong>",
+                preamble: "<strong>Please indicate if you did not understand the meaning of some of the words in Categories 1 and 2. Select all that apply:</strong>",
                 questions: [
                     {
                         prompt: "",
