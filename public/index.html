@@ -7,7 +7,7 @@
     <link href="https://unpkg.com/jspsych@8.0.0/css/jspsych.css" rel="stylesheet" type="text/css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!--    <link rel="stylesheet" href="styles.css">-->
+    <link rel="stylesheet" href="styles.css">
     <link rel="preload" as="image" href="words_animate_Cat1.PNG">
     <link rel="preload" as="image" href="words_animate_Cat2.PNG">
     <link rel="preload" as="image" href="images.PNG">
@@ -617,7 +617,7 @@
                 choices:'NO_KEYS',
                 on_start: function (data) {
                     setTimeout(()=>{
-                        window.location = `https://rit.az1.qualtrics.com/jfe/form/SV_4Pj9H2mBrf8CMd0?PROLIFIC_ID=${worker_id}`
+                        window.location = `https://rit.az1.qualtrics.com/jfe/form/SV_4Pj9H2mBrf8CMd0?PROLIFIC_PID=${worker_id}&STUDY_ID=${study_id}&SESSION_ID=${session_id}`
                     }, 10000)
                 }
             }
